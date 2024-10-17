@@ -1,32 +1,73 @@
-# minesweeper-c
+# 💎 Minesweeper in C
 
-## O jogo
-Campo Minado é um popular jogo de computador para um jogador. Foi inventado por
-Robert Donner em 1989 e tem como objetivo revelar um campo de minas sem que alguma
-seja detonada. Este jogo tem sido reescrito para as mais diversas plataformas, sendo a
-sua versão mais popular a incluída nativamente com o Microsoft Windows.
+**A terminal-based implementation of the classic Minesweeper game, built in C.**  
+Navigate through a minefield without detonating any bombs while revealing safe squares!
 
-## Regras
+---
 
-A área de jogo consiste num campo de quadrados retangular. Cada quadrado pode ser
-revelado clicando sobre ele, e se o quadrado clicado contiver uma mina, então o jogo
-acaba. Se, por outro lado, o quadrado não contiver uma mina, uma de duas coisas
-poderá acontecer:
-1. Um número aparece, indicando a quantidade de quadrados adjacentes que contêm
-minas;
-2. Nenhum número aparece. Neste caso, o jogo revela automaticamente os quadrados
-que se encontram adjacentes ao quadrado vazio, já que não podem conter minas;
-O jogo é ganho quando todos os quadrados que não têm minas são revelados.
+## 🎮 About the Game
 
-## Uso do programa
-Após a execução do programa, deve ser inserida a opção desejada.
+Minesweeper is a single-player puzzle game, originally invented by Robert Donner in 1989. The objective is to clear a rectangular field of hidden mines without triggering any of them. The game is renowned for its simplicity and strategic depth.
 
-### Opção 1: Imprimir o tabuleiro
-lê o nome de um tabuleiro do stdin (exemplos inclusos na pasta boards) e imprime o tabuleiro inalterado para o stdout
+---
 
-### Opção 2: mprimir o tabuleiro com as dicas
-lê o nome de um tabuleiro do stdin (exemplos inclusos na pasta boards) e imprime o tabuleiro com dias para o stdout
+## 📜 Rules
 
-### Opção 3: ação do usuário
-lê o nome de um tabuleiro do stdin (exemplos inclusos na pasta boards), e, após isso, as coordenadas em que o usuário deseja clicar, revelando o tabuleiro exposto até que sejam encontradas bordas de minas.
+- The game area consists of a rectangular grid of squares.
+- Clicking on a square reveals its contents:
+  1. If it contains a mine, the game is over.
+  2. If it’s safe, it either shows a number indicating adjacent mines or reveals adjacent squares if empty.
+- You win by revealing all squares that don’t contain mines.
 
+---
+
+## 🛠️ Usage
+
+After executing the program, choose an option:
+
+1. **Print the Board**  
+   Reads a board name from `stdin` (examples included in the `boards` directory) and prints the unaltered board to `stdout`.
+
+2. **Print the Board with Hints**  
+   Similar to option 1 but includes hints on adjacent mines.
+
+3. **User Action**  
+   Reads a board name and user-specified coordinates to reveal squares until mines are encountered.
+
+---
+
+## 🚀 Getting Started
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/voidashi/minesweeper-c.git
+```
+
+### Compilation
+
+Use a C compiler (like `gcc`) to compile the source files:
+
+```bash
+gcc -o minesweeper minesweeper.c
+```
+
+### Running the Game
+
+Run the executable to start playing:
+
+```bash
+./minesweeper
+```
+
+---
+
+## 🤝 Contributing
+
+Feel free to open issues or submit pull requests to improve this project!
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
