@@ -1,73 +1,73 @@
-# 💎 Minesweeper in C
+# 💎 Minesweeper *in Pure C*
 
-**A terminal-based implementation of the classic Minesweeper game, built in C.**  
-Navigate through a minefield without detonating any bombs while revealing safe squares!
+**Terminal implementation of the classic puzzle game with authentic gameplay mechanics**  
+[![C](https://img.shields.io/badge/C-ISO_C-blue?logo=c&logoColor=white)](https://en.wikipedia.org/wiki/C_(programming_language))
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
----
-
-## 🎮 About the Game
-
-Minesweeper is a single-player puzzle game, originally invented by Robert Donner in 1989. The objective is to clear a rectangular field of hidden mines without triggering any of them. The game is renowned for its simplicity and strategic depth.
+*Faithful recreation of the 1989 Robert Donner original*
 
 ---
 
-## 📜 Rules
+## 🎯 Gameplay Overview
 
-- The game area consists of a rectangular grid of squares.
-- Clicking on a square reveals its contents:
-  1. If it contains a mine, the game is over.
-  2. If it’s safe, it either shows a number indicating adjacent mines or reveals adjacent squares if empty.
-- You win by revealing all squares that don’t contain mines.
+### Core Objective
+Clear the minefield without detonating any bombs by:
+1. Revealing safe squares
+2. Using number hints (adjacent mine counts)
+3. Avoiding all hidden mines
 
----
-
-## 🛠️ Usage
-
-After executing the program, choose an option:
-
-1. **Print the Board**  
-   Reads a board name from `stdin` (examples included in the `boards` directory) and prints the unaltered board to `stdout`.
-
-2. **Print the Board with Hints**  
-   Similar to option 1 but includes hints on adjacent mines.
-
-3. **User Action**  
-   Reads a board name and user-specified coordinates to reveal squares until mines are encountered.
+### Key Features
+- **Three Game Modes**  
+  1. Board Viewer  
+  2. Hint-Assisted Preview  
+  3. Interactive Play
+- **File-Based Boards** - Load minefields from `boards` directory
+- **Terminal Interface** - Keyboard-driven gameplay
 
 ---
 
-## 🚀 Getting Started
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/voidashi/minesweeper-c.git
-```
+## 🛠️ Installation & Usage
 
 ### Compilation
-
-Use a C compiler (like `gcc`) to compile the source files:
-
 ```bash
+git clone https://github.com/voidashi/minesweeper-c.git
+cd minesweeper-c
 gcc -o minesweeper minesweeper.c
 ```
 
-### Running the Game
-
-Run the executable to start playing:
-
+### Execution
 ```bash
+# Start game interface
 ./minesweeper
+
+# Available modes:
+# 1) Print raw board
+# 2) Print hinted board
+# 3) Interactive play
 ```
 
+### Game Flow
+1. Select mode (1-3)
+2. Choose board file from `boards/`
+3. For interactive mode:
+   - Input coordinates (row,col)
+   - Reveal cells until win/loss
+
 ---
 
-## 🤝 Contributing
-
-Feel free to open issues or submit pull requests to improve this project!
+## ⚙️ Technical Implementation
+- **Pure C** - No external dependencies
+- **File I/O** - Load custom minefield layouts
+- **Terminal Control** - Basic text interface
 
 ---
 
-## 📄 License
+## 🤝 Contribution Guidelines
+- **Bug Reports**: Through GitHub Issues
+- **Enhancements**: Via Pull Requests
+- **Board Designs**: Submit new `.board` files
 
-This project is licensed under the [MIT License](./LICENSE).
+---
+
+## 📜 License
+MIT Licensed - Full terms in [LICENSE](LICENSE)
